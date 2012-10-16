@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:ng="http://angularjs.org">
+<head>
+<title>Angular </title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body ng:controller="RouteCtrl">
+
+<div id="header">
+    Angular Cellar
+    <button ng:click="addGoal()">New Goal</button>
+</div>
+
+<div id="sidebar">
+   <ng:include src="'tpl/wine-list.html'"></ng:include>
+</div>
+
+<div id="content">
+    <ng:view></ng:view>
+</div>
+
+<script src="<?php echo $this->basePath() ."/js/angular-0.9.19.min.js";?>" ng:autobind></script>
+<script src="<?php echo $this->basePath() ."/js/services.js";?>"></script>
+<script src="<?php echo $this->basePath() ."/js/controllers.js";?>"></script>
+
+</body>
+
+</html>
+

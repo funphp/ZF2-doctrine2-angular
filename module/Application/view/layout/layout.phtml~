@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="okdoit">
+<head>
+<title>okdo.it</title>
+
+<link rel="stylesheet" href="styles/layout.css" type="text/css">
+<script src="js/angular-1.0.1.min.js"></script>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/okdoit.js"></script>
+<script src="js/okdoitapiservice.js"></script>
+<script src="js/angular-resource-1.0.1.min.js"></script>
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+<style>
+    .butter-bar {
+  display: none;
+}
+
+.butter-bar.show {
+  display: block;
+  position: absolute;
+  background: yellow;
+  border: 1px solid #b4b400;
+  margin: 0 50%;
+  padding: .5em 2em;
+}
+</style>
+</head>
+ <body ng-controller="MainController">
+  <div class="butter-bar"></div>  
+
+<div class="wrapper row1" >
+  <header id="header" class="clear">
+    <hgroup>
+      <h1><a href="#">okdo.it</a></h1>
+      <h2>Angular js </h2>
+    </hgroup>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Search:</legend>
+        <input type="text" value="Search Our Website&hellip;" onFocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;">
+        <input type="submit" id="sf_submit" value="submit">
+      </fieldset>
+    </form>
+    <nav>
+      <ul>
+        <li><a class="btn" ng-click="setRoute('home')">Home</a></li>
+        <li><a class="btn" ng-click="setRoute('goals')">Goals</a></li>
+        <li><a class="btn" ng-click="setRoute('tasks')">Task</a></li>
+        
+        <li class="last"><a class="btn" ng-click="setRoute('about')">About</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+        <div class="container">
+            <?php echo $this->content; ?>
+            <hr>
+            <footer>
+                <p>&copy; 2005 - 2012 by Zend Technologies Ltd. <?php echo $this->translate('All rights reserved.') ?></p>
+            </footer>
+        </div> <!-- /container -->
+        <?php echo $this->inlineScript() ?>
+    </body>
+</html>

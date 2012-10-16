@@ -1,0 +1,5 @@
+<ul ng:controller="WineListCtrl">
+    <li ng:repeat="Api in wines">
+        <a href='#/wines/{{ wine.id }}'>{{ wine.name }}</a>
+    </li>
+</ul>

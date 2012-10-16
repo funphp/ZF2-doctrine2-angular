@@ -1,0 +1,24 @@
+<div class="form-left-col">
+    <label>Id:</label>
+    <input name="task.id" type="text" ng-model="task.id" value="{{ task.id }}" disabled />
+
+    <label>Title:</label>
+    <input type="text" name="task.title" ng-model="task.title"  value="{{ task.title }}" required/>
+
+    <label>Status</label>
+    <input type="text" name="task.status"  ng-model="task.status" value="{{ task.status }}"/>
+    
+    <label>Priority</label>
+    <input type="text" name="task.priority" ng-model="task.priority" value="{{ task.priority }}"/>
+    
+    <label>Progress</label>
+    <input type="text" name="task.progress"  ng-model="task.progress"  value="{{ task.progress }}"/>
+    
+    <label>Expiry</label>
+    <input type="text" name="task.expiry"   ng-model="task.expiry"  value="{{ task.expiry }}"/>
+
+    <div style="clear: both"></div>
+    <button class="save" ng:click="saveTask()">Save</button>
+    <button class="delete" ng:click="deleteTask()">Delete</button>
+</div>
+

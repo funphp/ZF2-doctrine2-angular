@@ -1,0 +1,14 @@
+<div class="form-left-col">
+    <label>Id:</label>
+    <input name="goal.id" type="text" value="{{ goal.data.goal.id }}" disabled />
+
+    <label>Title:</label>
+    <input type="text" name="goal.title"  value="{{ goal.data.goal.title }}" required/>
+
+    <label>Reward:</label>
+    <input type="text" name="goal.reward" value="{{ goal.data.goal.reward }}"/>
+
+    
+    <button class="save" ng:click="saveGoal()">Save</button>
+    <button class="delete" ng:click="deleteGoal()">Delete</button>
+</div>

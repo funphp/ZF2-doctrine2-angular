@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+<body>{{body}}</body>
+<button ng:click="addTask()">New Task</button>
+<ul ng:controller="taskCtrl">
+    <li ng:repeat="Task in tasks.data.task">
+        <a href='#/tasks/{{ Task.id }}'>{{ Task.title }}</a>
+    </li>
+</ul>

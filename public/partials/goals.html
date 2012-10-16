@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+<body>{{body}}</body>
+
+<ul ng:controller="goalCtrl">
+    <li ng:repeat="Goal in goals.data.goals">
+        <a href='#/goals/{{ Goal.id }}'>{{ Goal.title }}</a>
+    </li>
+</ul>
